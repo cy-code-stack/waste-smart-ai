@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "358095660686",
+    "project_id": "web-mobile-wastesmart",
+    "storage_bucket": "web-mobile-wastesmart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358095660686:android:3d5b09498e1b4939440bdf",
+        "android_client_info": {
+          "package_name": "com.example.wastesmart_final"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxbuBYP97wNWIl0aJBxPSP-7TIkViXv7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
