@@ -60,15 +60,15 @@ class WelcomePage extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
-                      'DNSC',
-                      style: TextStyle(
-                        fontSize: 70,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 4,
-                        color: Colors.white,
-                      ),
-                    ),
+                    // const Text(
+                    //   'DNSC',
+                    //   style: TextStyle(
+                    //     fontSize: 70,
+                    //     fontWeight: FontWeight.bold,
+                    //     letterSpacing: 4,
+                    //     color: Colors.white,
+                    //   ),
+                    // ),
                     const Text(
                       'WasteSmart',
                       style: TextStyle(

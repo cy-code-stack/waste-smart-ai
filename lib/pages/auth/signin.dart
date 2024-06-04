@@ -84,14 +84,14 @@ class _SignInPageState extends State<SignInPage> {
                           color: Colors.white,
                         ),
                       ),
-                      const Text(
-                        'DNSC',
-                        style: TextStyle(
-                          fontSize: 50,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
+                      // const Text(
+                      //   'DNSC',
+                      //   style: TextStyle(
+                      //     fontSize: 50,
+                      //     fontWeight: FontWeight.bold,
+                      //     color: Colors.white,
+                      //   ),
+                      // ),
                       const Text(
                         'WasteSmart',
                         style: TextStyle(

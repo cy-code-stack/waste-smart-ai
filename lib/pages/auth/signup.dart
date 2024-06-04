@@ -16,17 +16,20 @@ class _SignUpPageState extends State<SignUpPage> {
   final FirebaseAuthService auth = FirebaseAuthService();
 
   String? _emailError;
+  String? _nameError;
   String? _passwordError;
   String? _repeatPasswordError;
   bool _obscureText = true;
 
   final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _repeatPasswordController =
       TextEditingController();
 
   @override
   void dispose() {
+    _nameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
     _repeatPasswordController.dispose();
@@ -41,6 +44,18 @@ class _SignUpPageState extends State<SignUpPage> {
 
   bool _validateForm() {
     bool isValid = true;
+
+    if (_nameController.text.isEmpty) {
+      setState(() {
+        _nameError = 'This field is required';
+      });
+      isValid = false;
+    } else {
+      setState(() {
+        _nameError = null;
+      });
+    }
+
     if (_emailController.text.isEmpty ||
         !_emailController.text.contains('@gmail.com')) {
       setState(() {
@@ -251,6 +266,28 @@ class _SignUpPageState extends State<SignUpPage> {
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20,
                                   color: Color(0xff292929),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 80,
+                            margin: const EdgeInsets.only(bottom: 15),
+                            child: TextField(
+                              controller: _nameController,
+                              decoration: InputDecoration(
+                                labelText: 'Name',
+                                hintText: 'Enter your name',
+                                errorText: _nameError,
+                                prefixIcon: Icon(
+                                  Icons.person,
+                                  color:
+                                      const Color(0xff292929).withOpacity(0.6),
+                                ),
+                                border: const OutlineInputBorder(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(5),
+                                  ),
                                 ),
                               ),
                             ),
